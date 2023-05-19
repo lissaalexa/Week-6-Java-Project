@@ -5,14 +5,17 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
+//deck class represents the deck of playing cards for the game
 	//Question 1bi
 	List<Card> cards = new ArrayList<Card>();
 	
 	//Question 1bii-3
+	//initializes 52 playing card deck
 	Deck() {
 		String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
 		String[] numbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
-	
+		
+		//creates cards in the deck for each suit and number combination possible
 		for (String suit : suits) {
 			int count = 2;
 			for (String number : numbers) {
@@ -39,11 +42,13 @@ public class Deck {
 	}
 	
 	//Question 1bii-1
+	//method to shuffle the cards in the deck
 	public void shuffle() {
 		Collections.shuffle(cards);
 	}
 	
 	//Question 1bii-2
+	//method to draw the cards from the deck
 	public Card draw() {
 		Card drawCard = cards.get(0);
 		
